@@ -1,0 +1,100 @@
+:root {
+    --color-primary: #9F2936;
+    --color-secondary: #B35E06;
+    --color-tertiary: #6B9F25;
+    --color-body: black;
+    --color-page: white;
+    --color-backdrop: hsl(353, 10%, 95%);
+
+    font-size: 16px; /* reference font size */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--color-backdrop);
+}
+
+#pdf-download {
+    padding: 10px;
+}
+
+#page {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 1px 3px 1px #0002;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    
+    background-color: var(--color-page);
+}
+
+h1 {
+    color: var(--color-primary);
+    font-weight: normal;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+}
+
+h2 {
+    color: var(--color-secondary);
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    margin-top: 0.6rem;
+}
+
+h3 {
+    color: var(--color-secondary);
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin-top: 0.3rem;
+}
+
+h4 {
+    color: var(--color-body);
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    letter-spacing: 0.06rem;
+}
+
+p, li {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+a, a:visited {
+    color: #6B9F25;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+}
+
+main > article {
+    flex: 1;
+}
+
+main > aside {
+    flex: 0.33;
+}
+
+@media screen and (max-width:800px) {
+    main { flex-wrap: wrap; }
+    main > article, main > aside { flex-basis: 100% }
+}
